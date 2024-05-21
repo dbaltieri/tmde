@@ -4,4 +4,16 @@
     "details": [
       {
         "appID": "id1540777905.com.realnetworks.salzburg.test.tmderbt",
-        "paths": [ "
+        "paths": [ "/path/*/filename"],
+        "components": [
+          {
+            "/": "/path/*/filename",
+            "#": "*fragment",
+            "?": { "widget": "?*", "gromment": "please" }
+          }
+        ]
+      }
+    ]
+  }
+}
+
