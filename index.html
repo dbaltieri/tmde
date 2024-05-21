@@ -4,7 +4,7 @@
         <script type="text/javascript">
             window.onload = function() {
                 // Attempt to trigger the deep link
-                document.getElementById("l").src = "rbtplus-tmde://shop";
+                document.getElementById("l").src = "rbtplus-tmde://home";
 
                 // Set a timeout to check if the deep link succeeds
                 setTimeout(function() {
@@ -15,7 +15,7 @@
                     if (!isInApp) {
                         window.location = "https://apps.apple.com/de/app/telekom-freizeichent%C3%B6ne-musik/id1540777905";
                     }
-                }, 500);
+                }, 2000); // Increased timeout to 2000 milliseconds (2 seconds)
             };
         </script>
         <iframe id="l" width="1" height="1" style="visibility:hidden"></iframe>
