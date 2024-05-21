@@ -3,12 +3,18 @@
     <body>
         <script type="text/javascript">
             window.onload = function() {
-                // Deep link to your app goes here
+                // Attempt to trigger the deep link
                 document.getElementById("l").src = "rbtplus-tmde://home";
 
+                // Set a timeout to check if the deep link succeeds
                 setTimeout(function() {
-                    // Link to the App Store should go here -- only fires if deep link fails                
-                    window.location = "https://apps.apple.com/de/app/telekom-freizeichent%C3%B6ne-musik/id1540777905";
+                    // Check if the app has opened
+                    var isInApp = document.hidden || document.webkitHidden;
+
+                    // If the app hasn't opened, redirect to the App Store
+                    if (!isInApp) {
+                        window.location = "https://apps.apple.com/de/app/telekom-freizeichent%C3%B6ne-musik/id1540777905";
+                    }
                 }, 500);
             };
         </script>
